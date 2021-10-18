@@ -1,0 +1,197 @@
+@media screen and (max-width: 960px) {
+  /***** 共通 *****/
+  #main {
+    margin-left: 0;
+  }
+  .container {
+    padding: 60px 20px;
+  }
+  .main-title {
+    position: relative;
+    top: 10px;
+    left: 18px;
+    width: 180px;
+    margin-bottom: 0;
+  }
+  .sub-title {
+    margin-bottom: 30px;
+    font-size: 1.25rem;
+  }
+  .sub-title::before,
+  .sub-title::after {
+    width: 18%;
+  }
+
+  /***** header *****/
+  #header {
+    z-index: 10;
+    width: 100%;
+    height: 72px;
+    padding: 0;
+  }
+  /*** hamburger ***/
+  #navi {
+    display: block;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    z-index: 20;
+    width: 300px;
+    padding: 25px;
+    overflow-y: auto;
+    background: #ffffff;
+    transition: 0.5s;
+  }
+  .header #navi {
+    opacity: 1;
+    left: 0;
+  }
+  #navi ul .overview {
+    margin-bottom: 30px;
+  }
+  #navi ul li {
+    padding: 10px 0;
+  }
+  /* ボタンの作成 */
+  .menu-trigger {
+    position: fixed;
+    top: 22px;
+    right: 18px;
+    z-index: 20;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .menu-trigger span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #121212;
+    transition: 0.5s;
+  }
+  /* 位置調整 */
+  #header .menu-trigger span:nth-child(1) {
+    top: 4px;
+  }
+  #header .menu-trigger span:nth-child(2) {
+    top: 14px;
+  }
+  #header .menu-trigger span:nth-child(3) {
+    bottom: 4px;
+  }
+  /* ボタンクリック時のアクション */
+  .header .menu-trigger span {
+    background-color: #ffffff;
+  }
+  .header .menu-trigger span:nth-child(1) {
+    transform: translateY(10px) rotate(-315deg);
+  }
+  .header .menu-trigger span:nth-child(2) {
+    opacity: 0;
+  }
+  .header .menu-trigger span:nth-child(3) {
+    transform: translateY(-10px) rotate(315deg);
+  }
+  #mask {
+    display: none;
+    transition: 0.5s;
+  }
+  .header #mask {
+    display: block;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    cursor: pointer;
+  }
+  /*** video ***/
+  #video {
+    height: 80vh;
+  }
+  #video .top-video {
+    top: 72px;
+    right: 0;
+    left: 0;
+    height: 520px;
+    margin: 0 auto;
+  }
+  /*** project ***/
+  #project .product {
+    flex-direction: column;
+  }
+  #project .product li {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #project .product li:nth-last-child(2) {
+    margin-bottom: 30px;
+  }
+
+  /*** feature ***/
+  #feature {
+    padding-bottom: 60px;
+  }
+
+  /*** flow ***/
+  #flow {
+    padding-top: 0;
+  }
+  .planning {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .planning ol {
+    margin-bottom: 80px;
+  }
+  .planning ol::before {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  .planning ol li {
+    width: calc(100vw - 100px);
+  }
+  .planning ol li::after {
+    border-right: calc(50vw - 50px) solid transparent;
+    border-left: calc(50vw - 50px) solid transparent;
+  }
+  .planning dl {
+    margin-left: 50px;
+  }
+
+  /*** contact ***/
+  #contact {
+    padding-bottom: 60px;
+  }
+  #contact .inquiry {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  #contact .inquiry .contents {
+    width: 60%;
+    margin-top: 20px;
+  }
+  #contact .inquiry .contents:first-child {
+    margin-top: 0;
+  }
+
+  /***** footer *****/
+  #footer .bottom-menu {
+    flex-wrap: wrap;
+  }
+  #footer .bottom-menu li {
+    margin-bottom: 10px;
+  }
+}
